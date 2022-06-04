@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mualliflar </title>
+</head>
+<body>
+    <h1>Bizda bor mualliflar  ro'yxati:</h1>
+    <br>
+    <br>
+    {% for i in  muallif %}
+    <h3>{{ i }} </h3>
+    {% endfor %}
+    <h3>{{ i.ism }},{{i.guruh}},{{i.kitob_soni}} </h3>
+    <button><a href="/student/{{i.id}}/">Ochirish</a></button>
+    <button><a href="/muallif/{{i.id}}/edit/">Tahrirlash</a></button>
+    {% endfor %}
+    <br>
+    <br>
+    <form>
+        <input> type = "text" palaceholder
+</body>
+</html>
+
+
+

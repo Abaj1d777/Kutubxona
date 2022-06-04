@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitoblar</title>
+</head>
+<body>
+    <h1>Bizda bor Kitoblar  ro'yxati:</h1>
+    <br>
+    <br>
+    {% for i in  kitob %}
+    <h3>{{ i.nom}},{{i.sahifa}},{{i.sana}} </h3>
+    <button><a href="/kitoblar/{{i.nom}}/">Ochirish</a></button>
+    {% endfor %}
+    <br>
+    <br>
+    <form method ="post" action = "/kitoblar/">{%csrf_token %}
+        {{ forma }}
+        <button type="submit">Qo'shish</button>
+    </form>
+</body>
+</html>
+
+
+

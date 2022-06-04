@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Records</title>
+</head>
+<body>
+    <h1>Bizda bor Recordlar  ro'yxati:</h1>
+    <br>
+    <br>
+    {% for i in  Record %}
+    <h3>{{ i.sana}},{{i.student}},{{i.kitob}} </h3>
+    <button><a href="/Recordss/{{i.kitob}}/">Ochirish</a></button>
+    {% endfor %}
+    <br>
+    <br>
+    <form method ="post" action = "/Recordss/">{%csrf_token %}
+        {{ forma }}
+        <button type="submit">Qo'shish</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Oquvchilar royhati: </h1>
+    <br>
+    {% for i in students %}
+    {%   if i|length > 3 %}
+    <ul>
+
+        <li><h2>{{ i }}</h2></li>
+        <a href=" /oquvchi/{{i}}/"><button>OChirish</button></a>
+    </ul>
+
+    {% endif %}
+    {% endfor %}
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+    <h1>Student tahrilrlash </h1>
+    <br>
+    <br>
+    <form mathod="post" action="/student/{{student.id}}/edit/">{% csrf_token   %}
+        <input type="text" value="{{student.ism}}" name = "i">
+        <input type="text" value="{{student.guruh}}" name = "g">
+        <input type="number" value="{{student.kitob_soni}}" name = "k_s">
+        <button type="submit">Tahrirlash</button>
+    </form>
+</body>
+</html>

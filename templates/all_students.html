@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+
+</head>
+<body>
+    <h1>Bizda bor studentlar  ro'yxati:</h1>
+    <br>
+    <br>
+    {% for i in  Student %}
+    <h3>{{ i.ism }},{{i.guruh}},{{i.kitob_soni}} </h3>
+    <button><a href="/student/{{i.id}}/edit/"> Tahrirlash </a></button>
+    {% endfor %}
+    <br>
+    <br>
+    <form method ="post" action = "/students/">{%csrf_token %}
+        {{ forma }}
+        <button type="submit">Qo'shish</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+

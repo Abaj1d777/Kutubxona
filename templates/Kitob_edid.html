@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitob</title>
+</head>
+<body>
+    <h1>Bizda bor Kitoblar  ro'yxati:</h1>
+    <br>
+    <br>
+    {% for i in  kitob %}
+    <h3>{{ i }} </h3>
+    {% endfor %}
+    <h3>{{ i.nom }},{{i.sahifa}},{{i.sab}} </h3>
+    <button><a href="/student/{{i.id}}/">Ochirish</a></button>
+    <button><a href="/muallif/{{i.id}}/edit/">Tahrirlash</a></button>
+    {% endfor %}
+    <br>
+    <br>
+
+</body>
+</html>

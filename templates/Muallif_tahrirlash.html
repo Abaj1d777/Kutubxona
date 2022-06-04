@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muallif</title>
+</head>
+<body>
+    <h1>Muallif tahrilrlash </h1>
+    <br>
+    <br>
+    <form mathod="post" action="/muallif/{{muallif.id}}/edit/">{% csrf_token   %}
+        <input type="text" value="{{muallif.ism}}" name = "i">
+        <input type="number" value="{{muallif.yosh}}" name = "y">
+        <input type=" " value="{{muallif.tirik}}" name = "t">
+        <input type="number" value="{{muallif.kitob_soni}}" name = "k_s">
+        <button type="submit">Tahrirlash</button>
+        </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
